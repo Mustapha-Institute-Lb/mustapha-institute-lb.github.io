@@ -1,139 +1,75 @@
 ---
 layout: default
+premalink: /courses/:title
 ---
-    <div class="home">
 
-      <h1>History of Magic <span style="font-size: 20px;color: #0006;">/ Fall 1998 </span></h1>
+<div>
 
-      <div class="announcement-box" style="margin-top:30px">
-        <h2>Updates</h2>
+  <h1>{{page.title}}</h1>
+
+  <div class="announcement-box" style="margin-top:30px">
+    <h2>Summary</h2>
+    <ul>
+      
+      <li class="no-p-margin">
+        <b>Audience</b>: {{page.audience}}
+      </li>
+      
+      <li class="no-p-margin">
+        <b>Objectives</b>:
         <ul>
-
-          <li class="no-p-margin">
-
-            <p>Sample announcement, Please check out <a href="/">here</a>.</p>
-
-
-          </li>
-
-          <li class="no-p-margin">
-
-
-            New Assignment released: [<a
-              href="/jekyll-course-website-template/assignments/01_sample_assignment">Assignment #1 - Sample
-              Assignment</a>]
-
-
-          </li>
-
-          <li class="no-p-margin">
-
-
-            New Lecture is up: Sample Lecture
-
-
-
-            [<a title="Download notes" href="
-  
-    /jekyll-course-website-template/static_files/presentations/lec.zip 
-  ">notes</a>]
-
-            [<a title="Download codes" href="
-  
-    /jekyll-course-website-template/static_files/presentations/code.zip 
-  ">codes</a>]
-
-            [<a title="Download slides" href="
-  
-    https://google.com 
-  ">slides</a>]
-
-
-
-
-
-          </li>
-
+          {% for objective in page.objectives %}
+          <li> {{ objective }} </li>
+          {% endfor %}
         </ul>
+      </li>
 
-      </div>
-      <br />
+      {% if page.takeaways and page.takeaways.size != 0 %}
+      <li class="no-p-margin">
+        <b>Takeaway</b>:
+        <ul>
+          {% for takeaway in page.takeaways %}
+          <li> {{ takeaway }} </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endif %}
+    
+    </ul>
+  </div>
 
-      <h2>Course Description</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare aliquam mattis. Donec hendrerit
-        sollicitudin urna. Aliquam venenatis rutrum velit, at lobortis dui cursus a. Nam varius metus in turpis
-        maximus, ut rhoncus tellus dictum. In aliquam tortor nec mi dapibus, sit amet vehicula dolor auctor.</p>
+  <br />
 
-      <p>Register to our <a href="https://groups.google.com/forum/#!forum/gp-id">Google groups page</a> to get course
-        notifications via email.</p>
+  <h2>Course Description</h2>
+  <p>{{page.description}}</p>
 
+  <br>
 
-
-      <h2>Previous Offerings</h2>
-      <ul class="previous-offerings">
-
-        <li><a href="https://previous_course_website.url/">Fall 1997</a></li>
-
-        <li><a href="https://previous_course_website.url/">Fall 1996</a></li>
-
-      </ul>
-
-
-      <br>
-      <div>
-        <div style="width:35%; float: left">
-          <!-- <h2>Instructors</h2> -->
-          <!-- <div class="image--cover-container">
-              <img src="/jekyll-course-website-template" class="image--cover">
-              <p></p>
-          </div> -->
-
-          <div class="profile-pic-gallary ">
-            <h2>Instructors</h2>
-
-            <div class="image--cover-container">
-              <img src="/jekyll-course-website-template/_images/pp/dumbledore.jpg" class="image--cover">
-
-              <p><a href="https://en.wikipedia.org/wiki/Albus_Dumbledore">Albus Dumbledore</a></p>
-
-            </div>
-
-            <div class="image--cover-container">
-              <img src="/jekyll-course-website-template/_images/pp/mcgonagall.jpg" class="image--cover">
-
-              <p>Minerva McGonagall</p>
-
-            </div>
-
-          </div>
+  <div>
+    <div style="width:35%; float: left">
+      <div class="profile-pic-gallary ">
+        <h2>Instructors</h2>
+        {% for instructor in page.instructors %}
+        <div class="image--cover-container">
+          <img src="{{instructor.img}}" class="image--cover">{{instructor.name}}</a></p>
         </div>
-
-        <div style="width:65%; float: left">
-          <div class="profile-pic-gallary ">
-            <h2>Teaching Assistants</h2>
-
-            <div class="image--cover-container">
-              <img src="/jekyll-course-website-template/_images/pp/potter.jpg" class="image--cover">
-
-              <p><a href="https://en.wikipedia.org/wiki/Harry_Potter_(character)">Harry Potter</a></p>
-
-            </div>
-
-            <div class="image--cover-container">
-              <img src="/jekyll-course-website-template/_images/pp/granger.jpg" class="image--cover">
-
-              <p><a href="https://en.wikipedia.org/wiki/Hermione_Granger">Hermione Granger</a></p>
-
-            </div>
-
-            <div class="image--cover-container">
-              <img src="/jekyll-course-website-template/_images/pp/weasley.jpg" class="image--cover">
-
-              <p><a href="https://en.wikipedia.org/wiki/Ron_Weasley">Ron Weasley</a></p>
-
-            </div>
-
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
+
+    {% if page.assistants and page.assistants.size !=0 %}
+    <div style="width:65%; float: left">
+      <div class="profile-pic-gallary ">
+        <h2>Teaching Assistants</h2>
+        {% for assistant in page.assistants %}
+        <div class="image--cover-container">
+          <img src="{{assistant.img}}" class="image--cover">
+          <p><a style="color: black; text-decoration: none;">{{assistant.name}}</a></p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
