@@ -432,6 +432,14 @@ pre>code {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .wrapper {
+        max-width: 750px;
+        padding-right: 15px;
+        padding-left: 15px
+    }
+}
+
 .wrapper:after,
 .footer-col-wrapper:after {
     content: "";
@@ -1144,7 +1152,7 @@ article ul#archive>li:before {
 }
 
 .container-item {
-    margin: 10px 0px 10px 0px;
+    margin: 20px 0px 20px 0px;
 }
 
 .container-item p {
@@ -1152,28 +1160,48 @@ article ul#archive>li:before {
     font-size: 20px;
 }
 
+.wrappable {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .wrappable {
+      flex-wrap: wrap;
+    }
+  }
+
+
 .card {
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
     border: solid;
     border-width: thin;
     border-color: lightgray;
-    margin: 2px 10px 2px 10px;
-    max-height: 400px;
-    max-width: 300px;
-    flex: 0 0 auto;
-    flex-basis: 33.333%;
-    flex-grow: 0;
+    margin-right: 10px;
     flex-shrink: 0;
+    flex-basis: 30%;
+    max-height: 400px;
 }
 
 .gallery {
     display: flex;
+    overflow-x: scroll;
     flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    align-items: stretch;
+    justify-content: start;
 }
+
+@media screen and (max-width: 767px) {
+    .gallery {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+        margin-bottom: 20px;
+        margin-right: 0px;
+        flex-basis: 90%;
+    }
+  }
 
 .card img {
     width: 100%;
@@ -1197,10 +1225,9 @@ article ul#archive>li:before {
 }
 
 .card .note {
-    height: 33.3%;
     text-align: start;
     display: block;
-    padding: 60px 20px;
+    padding: 60px 10px 10px 10px;
     font-size: 15px;
 }
 
