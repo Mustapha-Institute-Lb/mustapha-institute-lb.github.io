@@ -21,5 +21,6 @@ description:
 instructors:
     - name: Ahmad Mustapha
       img: /assets/img/instructor_amm.png
+      link: https://ahmadm-dl.github.io/
 assistants:
 ---

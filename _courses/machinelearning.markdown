@@ -12,7 +12,8 @@ takeaways:
 description:
     Embark on a three-day exploration of Machine Learning in this workshop. Day 1 delves into real-world use cases, offering a nuanced understanding of ML's impact on businesses, particularly tailored for investors. Day 2 provides project managers and enthusiasts with a detailed overview of the ML landscape, focusing on the essential steps involved in building, training, and hosting ML models. The final day is dedicated to a hands-on experience through a live code session, offering participants the opportunity to observe the practical implementation of an ML pipeline.
 instructors:
-    - name: Ahmad Mustapha
-      img: /assets/img/instructor_amm.png
+    - name: Ali Mzahem
+      img: /assets/img/instructor_aam.png
+      link: https://www.linkedin.com/in/ali-mzahem-005459113
 assistants:
 ---

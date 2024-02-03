@@ -10,11 +10,11 @@ premalink: /courses/:title
   <div class="announcement-box" style="margin-top:30px">
     <h2>Summary</h2>
     <ul>
-      
+
       <li class="no-p-margin">
         <b>Audience</b>: {{page.audience}}
       </li>
-      
+
       <li class="no-p-margin">
         <b>Objectives</b>:
         <ul>
@@ -34,7 +34,7 @@ premalink: /courses/:title
         </ul>
       </li>
       {% endif %}
-    
+
     </ul>
   </div>
 
@@ -51,7 +51,10 @@ premalink: /courses/:title
         <h2>Instructors</h2>
         {% for instructor in page.instructors %}
         <div class="image--cover-container">
-          <img src="{{instructor.img}}" class="image--cover">{{instructor.name}}</a></p>
+          <a href="{{instructor.link}}">
+            <img src="{{instructor.img}}" class="image--cover">
+            {{instructor.name}}
+          </a>
         </div>
         {% endfor %}
       </div>
