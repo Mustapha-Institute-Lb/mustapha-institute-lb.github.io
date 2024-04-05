@@ -1,6 +1,11 @@
 ---
 layout: course
 title: Spearhead Competition & Land A Job
+published: true
+thumbnail: /assets/img/competition.jpg
+type: Workshop
+note: 
+headline: A tailored 3-days workshop that gurantees fast and strong arrival to workforce for engineering students.
 audience: Engineering Students
 objectives:
     - Learn to develop a personalized career roadmap

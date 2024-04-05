@@ -1,6 +1,11 @@
 ---
 layout: course
 title: Introduction to Python
+published: true
+thumbnail: /assets/img/python.jpg
+type: Online Course
+note: 
+headline: A specialized python course with several projects to jump start your programming journey.
 audience: General
 objectives:
     - Establish a solid understanding of fundamental programming 
@@ -15,5 +20,3 @@ instructors:
       img: /assets/img/instructor_amm.png
 assistants:
 ---
-
-

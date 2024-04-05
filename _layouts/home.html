@@ -41,8 +41,7 @@ layout: default
         <div class="container">
             <i class="container-item fa-solid fa-user fa-5x"></i>
             <p>Industry Experts</p>
-            <p>Our lecturers aren't just educators, they're seasoned professionals with proven experience in the
-                industry.</p>
+            <p>Our lecturers aren't just educators, they're seasoned professionals with proven experience in the industry.</p>
         </div>
     </div>
 
@@ -51,60 +50,23 @@ layout: default
 
         <div class="gallery">
 
+            {% for course in site.courses %}
             <div class="card">
-                <img src="/assets/img/competition.jpg">
+                <img src="{{course.thumbnail}}">
                 <div class="title">
-                    <a href="courses/competition" style="text-decoration: none; color: black;">
-                        <h1>Spearhead The Competition</h1>
+                    <a href="{{course.url}}" style="text-decoration: none; color: black;">
+                        <h1>{{course.title}}</h1>
                     </a>
-                    <h3>A tailored 3-days workshop that gurantees fast and strong arrival to workforce for engineering
-                        students.</h3>
+                    <h3>{{course.headline}}</h3>
                 </div>
                 <p class="note">
-                    Workshop
+                    {{course.type}}
+                    {% if course.note %}
+                    <span style="color: orange;">{{course.note}}</span>
+                    {% endif %}
                 </p>
             </div>
-
-            <div class="card">
-                <img src="/assets/img/machine learning.jpg">
-                <div class="title">
-                    <a href="courses/machinelearning" style="text-decoration: none; color: black;">
-                        <h1>Machine Learning Introduction</h1>
-                    </a>
-                    <h3>A tailored 3-days workshop with hands-on coding sessions to understand machine learning.
-                    </h3>
-                </div>
-                <p class="note">
-                    Workshop
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="/assets/img/python.jpg">
-                <div class="title">
-                    <a href="courses/python" style="text-decoration: none; color: black;">
-                    <h1>Python Introduction</h1>
-                    </a>
-                    <h3>A specialized python course with several projects to jump start your programming journey.
-                    </h3>
-                </div>
-                <p class="note">
-                    Course
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="/assets/img/ai.jpg">
-                <div class="title">
-                    <a href="#courses" style="text-decoration: none; color: black;">
-                    <h1>AI Litracy</h1>
-                    </a>
-                    <h3>A short course to understand AI and how to use latest AI products such as ChatGPT.</h3>
-                </div>
-                <p class="note">
-                    Short Course <span style="color: orange;">(Upcoming)</span>
-                </p>
-            </div>
+            {% endfor %}
 
         </div>
     </div>

@@ -1,6 +1,11 @@
 ---
 layout: course
-title: Machine Learning Introduction 
+title: Machine Learning Introduction
+published: false
+thumbnail: /assets/img/machine learning.jpg
+type: Workshop
+note: 
+headline: A tailored 3-days workshop with hands-on coding sessions to understand machine learning.
 audience: Investors, Project Managers, Engineers
 objectives:
     - Understand practical applications of Machine Learning, and real-world use cases.
